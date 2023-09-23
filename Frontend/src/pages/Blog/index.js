@@ -26,7 +26,7 @@ function Blog() {
                             <h2>{data.title}</h2>
 
                             <p>{data.shortDescribtion}</p>
-                            <Button outline>Xem thêmm</Button>
+                            <Button outline>Xem thêmmmm</Button>
                         </div>
                     </div>
                 ))}
