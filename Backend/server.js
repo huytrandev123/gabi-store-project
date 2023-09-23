@@ -51,7 +51,7 @@ const db = mysql.createConnection({
   host: "localhost",
   user: "root",
   password: "",
-  database: "cloth_shopping",
+  database: "cloth_shoppin",
 });
 
 // app.get("/", (req, res) => {
@@ -228,7 +228,5 @@ app.post("/forget_password", (req, res) => {
 app.listen(port, () => {
   console.log(`Project is running at ${port}`);
 });
-
-
 
 // ADMIN
