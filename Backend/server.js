@@ -51,7 +51,7 @@ const db = mysql.createConnection({
   host: "localhost",
   user: "root",
   password: "",
-  database: "cloth_shoppin",
+  database: "cloth_shopping",
 });
 
 // app.get("/", (req, res) => {

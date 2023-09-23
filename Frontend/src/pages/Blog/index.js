@@ -23,11 +23,10 @@ function Blog() {
                             <img src={data.img} />
                         </div>
                         <div className={cx('content')}>
-                           
-                                <h2>{data.title}</h2>
+                            <h2>{data.title}</h2>
 
                             <p>{data.shortDescribtion}</p>
-                            <Button outline>Xem thêm</Button>
+                            <Button outline>Xem thêmm</Button>
                         </div>
                     </div>
                 ))}
