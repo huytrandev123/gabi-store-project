@@ -1,5 +1,5 @@
 import classNames from 'classnames/bind';
-import styles from './BestSeller/BestSeller.module.scss';
+import styles from './Home.module.scss';
 
 
 import BestSeller from './BestSeller';

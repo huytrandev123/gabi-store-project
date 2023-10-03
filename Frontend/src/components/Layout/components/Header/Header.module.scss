@@ -4,7 +4,7 @@
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12);
     display: flex;
     justify-content: center;
-    background-color: #f8a59f;
+    background-color: #b1cbf8;
 }
 
 .inner {
@@ -37,15 +37,11 @@
 .headerMenu ul li a {
     // list-style: none;
     padding: 0 24px;
-    text-transform: uppercase;
-    // &:hover {
-    //     color: #ffff;
-    //     cursor: pointer;
-    // }
+
 
     position: relative;
     display: block;
-    text-transform: uppercase;
+    text-transform: capitalize;
     // margin: 20px 0;
     // padding: 10px 20px;
     text-decoration: none;

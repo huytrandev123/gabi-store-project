@@ -12,7 +12,7 @@ function Card({ item }) {
                 <div className={cx('image')}>
                     {item.new && <span>Hàng mới về</span>}
                     <img src={item.img} className={cx('mainImg')} />
-                    
+
                     <img src={item.img2} className={cx('secondImg')} />
                 </div>
                 <h2>{item.name}</h2>

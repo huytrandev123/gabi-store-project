@@ -1,10 +1,12 @@
 import styles from './BestSeller.module.scss';
 import classNames from 'classnames/bind';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 
 import { useEffect, useState } from 'react';
+import { faCartArrowDown, faCartPlus, faCartShopping } from '@fortawesome/free-solid-svg-icons';
 
 const cx = classNames.bind(styles);
 
@@ -20,10 +22,9 @@ function BestSeller() {
 
     useEffect(() => {
         Aos.init({
-            duration:400,
+            duration: 400,
             delay: 200,
             easing: 'ease-in-sine',
-
         });
     }, []);
     return (
@@ -35,6 +36,9 @@ function BestSeller() {
                     {bestSeller.map((best) => (
                         <div className={cx('inner__item')} key={best.id}>
                             <img src={best.img} className={cx('inner__item-img')} />
+                            <span className={cx('sub-title')} >
+                                <FontAwesomeIcon icon={faCartPlus} className={cx('icon')} />
+                            </span>
 
                             <div className={cx('inner__item-content')}>
                                 <p className={cx('inner__item-content-title')}>

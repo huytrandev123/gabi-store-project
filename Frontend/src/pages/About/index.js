@@ -1,10 +1,19 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import classNames from 'classnames/bind';
 import style from './About.module.scss';
+import axios from 'axios';
 
 const cx = classNames.bind(style);
 
 function About() {
+    const [cate, setCate] = useState([])
+    console.log('cate',cate);
+
+    useEffect(() => {
+        axios('http://localhost:8000/cate')
+            .then(data => setCate(data.data))
+    },[])
+
     return (
         <div className={cx('wrapper')}>
             <img src="https://file.hstatic.net/1000184601/file/profile-new-1_4f81c40a9e834a77aec6009be7bb2ae4.jpg" />
@@ -85,6 +94,8 @@ function About() {
                     <div className={cx('logo')}>gabistore</div>
                 </div>
             </div>
+
+
         </div>
     );
 }

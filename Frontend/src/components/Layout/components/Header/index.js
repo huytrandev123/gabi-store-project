@@ -10,7 +10,6 @@ import {
     faCartShopping,
     faCircleQuestion,
     faEarthAsia,
-    faEllipsis,
     faEllipsisVertical,
     faMagnifyingGlass,
 } from '@fortawesome/free-solid-svg-icons';
@@ -148,6 +147,7 @@ function Header() {
 
                             {/* search */}
                             <FontAwesomeIcon className={cx('search')} icon={faMagnifyingGlass} />
+
 
                             {/* cart */}
                             <Link to="/cart">

@@ -32,6 +32,7 @@ import About from '../pages/About';
 import Story from '../pages/Story';
 import Rules from '../pages/Rules';
 import Information from '../pages/Information';
+import BlogDetail from '../pages/Blog/BlogDetail';
 
 // Routes ko đăng nhập vẫn vào dc
 const publicRoutes = [
@@ -39,6 +40,7 @@ const publicRoutes = [
     { path: '/about', component: About },
     { path: '/following', component: Following },
     { path: '/blog', component: Blog },
+    { path: '/blog_detail', component: BlogDetail },
     { path: '/story', component: Story },
     { path: '/rules', component: Rules },
     {path: '/information', component: Information},
