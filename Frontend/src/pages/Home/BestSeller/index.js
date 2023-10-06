@@ -34,8 +34,8 @@ function BestSeller() {
                 {/* <h1 className='title'>BestSeller</h1> */}
                 <div className={cx('inner')}>
                     {bestSeller.map((best) => (
-                        <div className={cx('inner__item')} key={best.id}>
-                            <img src={best.img} className={cx('inner__item-img')} />
+                        <div  className={cx('inner__item')} key={best.id}>
+                            <img src={best.img} className={cx('inner__item-img')}  />
                             <span className={cx('sub-title')} >
                                 <FontAwesomeIcon icon={faCartPlus} className={cx('icon')} />
                             </span>

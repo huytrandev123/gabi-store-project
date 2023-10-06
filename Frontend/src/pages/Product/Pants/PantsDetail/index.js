@@ -23,7 +23,7 @@ function PantsDetail() {
             <div className={cx('inner')}>
                 <div className={cx('left')}>
                     <div className={cx('images')}>
-                        <img src={details.img} /> 
+                        <img src={details.img} />
                     </div>
 
                     {/* <div className={cx('mainImg')}>

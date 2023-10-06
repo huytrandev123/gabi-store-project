@@ -40,7 +40,7 @@ const publicRoutes = [
     { path: '/about', component: About },
     { path: '/following', component: Following },
     { path: '/blog', component: Blog },
-    { path: '/blog_detail', component: BlogDetail },
+    { path: '/blog/:id', component: BlogDetail },
     { path: '/story', component: Story },
     { path: '/rules', component: Rules },
     {path: '/information', component: Information},
