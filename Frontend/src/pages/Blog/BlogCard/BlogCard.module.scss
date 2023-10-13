@@ -17,7 +17,7 @@
             background-color: lightcyan;
             position: absolute;
             top: 20px;
-            left: -20px;
+            left: -10px;
             z-index: -1;
         }
         img {
@@ -34,7 +34,9 @@
         justify-content: space-between;
 
         h2 {
-            font-size: 4.8rem;
+            font-size: 4rem;
+            text-transform: uppercase;
+            margin-bottom: 20px;
         }
 
         p {
@@ -46,14 +48,19 @@
             padding: 10px 20px;
             border: none;
             cursor: pointer;
-            background-color: #fff;
-            border: 1px solid var(--primary);
+            background-color: var(--primary-button);
+            color: var(--white-color);
+            // font-weight: 500;
+            font-size: 1.5rem;
+            border: 1px solid var(--primary-button);
 
             &:hover {
-                border: 1px solid var(--primary);
-                background-color: lightcoral;
-                color: #000;
+                border: 1px solid var(--primary-button);
+                background-color: #166afbe6;
             }
+        }
+        .btn { 
+            margin-top: 20px;
         }
     }
 }

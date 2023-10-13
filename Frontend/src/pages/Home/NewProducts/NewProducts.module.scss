@@ -4,7 +4,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    // margin-top: 20px;
     // background-color: #e5fffabc;
 }
 
@@ -35,8 +35,8 @@
 
     .inner-bottom {
         display: flex;
-        flex-wrap: wrap;
+        // flex-wrap: wrap;
         justify-content: space-evenly;
-        gap: 50px;
+        gap: 40px;
     }
 }

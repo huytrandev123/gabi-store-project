@@ -96,7 +96,7 @@ function Contact() {
                                     Hãy gọi cho chúng tôi để được sự hỗ trợ sớm nhất
                                 </p>
                                 <p className={cx('sub-inner-phone')}>
-                                    <Button leftIcon={<FontAwesomeIcon icon={faPhone} />} primary disabled>
+                                    <Button className={cx('btn')} leftIcon={<FontAwesomeIcon icon={faPhone} />} primary disabled>
                                         0934.198.400
                                     </Button>
                                 </p>
@@ -108,7 +108,7 @@ function Contact() {
                                     Hãy đến tham quan để trải nghiệm sự tuyệt vời mà chúng tôi mang lại
                                 </p>
                                 <p className={cx('sub-inner-phone')}>
-                                    <Button leftIcon={<FontAwesomeIcon icon={faLocation} />} primary disabled>
+                                    <Button className={cx('btn')} leftIcon={<FontAwesomeIcon icon={faLocation} />} primary disabled>
                                         165 Trần Trọng Cung, Tân Thuận Đông, Quận 7, Thành phố Hồ Chí Minh
                                     </Button>
                                 </p>
@@ -120,7 +120,7 @@ function Contact() {
                                     Khi bạn cần nhắn nhủ với chúng tôi một điều gì đó
                                 </p>
                                 <p className={cx('sub-inner-phone')}>
-                                    <Button leftIcon={<FontAwesomeIcon icon={faEnvelope} />} primary disabled>
+                                    <Button className={cx('btn')} leftIcon={<FontAwesomeIcon icon={faEnvelope} />} primary disabled>
                                         gabi_store@gmail.com
                                     </Button>
                                 </p>

@@ -51,7 +51,7 @@ const db = mysql.createConnection({
   host: "localhost",
   user: "root",
   password: "",
-  database: "cloth_shopping",
+  database: "test",
 });
 
 // app.get("/", (req, res) => {
@@ -159,6 +159,14 @@ app.get("/best_seller", (req, res) => {
 
 app.get("/new", (req, res) => {
   const sql = `SELECT * FROM products WHERE new = 1  order by id desc `;
+  db.query(sql, (err, data) => {
+    if (err) throw err;
+    return res.json(data);
+  });
+});
+
+app.get("/new-limit", (req, res) => {
+  const sql = `SELECT * FROM products WHERE new = 1  order by id desc limit 4 `;
   db.query(sql, (err, data) => {
     if (err) throw err;
     return res.json(data);

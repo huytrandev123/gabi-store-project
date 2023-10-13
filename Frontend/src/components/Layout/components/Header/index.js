@@ -3,7 +3,6 @@ import classNames from 'classnames/bind';
 import { Link } from 'react-router-dom';
 import Tippy from '@tippyjs/react/headless';
 import 'tippy.js/dist/tippy.css';
-import logo from '../../../../img/logo5-removebg-preview.png';
 // Fontawesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -127,7 +126,7 @@ function Header() {
                             <FontAwesomeIcon className={cx('search')} icon={faMagnifyingGlass} />
 
                             {/* cart */}
-                            <Link >
+                            <Link>
                                 <div className={cx('cartIcon')}>
                                     <FontAwesomeIcon
                                         className={cx('cart')}

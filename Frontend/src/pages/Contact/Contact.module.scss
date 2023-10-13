@@ -59,21 +59,22 @@ form {
     border: 1px solid #ccc;
 }
 
-.submit { 
-    width: var(--default-layout-width)
+.submit {
+    width: var(--default-layout-width);
 }
 
 .form-btn {
     margin-top: 20px;
     height: 60px;
-    background-color: var(--primary);
+    background-color: var(--primary-button);
     color: var(--white-color);
     border-radius: 20px;
     font-size: 2rem;
 
     &:hover {
-        transition: .2s;
+        transition: 0.2s;
         opacity: 0.8;
+        cursor: pointer;
     }
 }
 
@@ -109,6 +110,12 @@ form {
 .sub-inner-title {
 }
 
+.sub-inner-phone {
+    .btn { 
+        background-color: var(--primary-button);
+    }
+}
+
 .sub-inner-content {
     color: var(--text-color);
 }
@@ -123,4 +130,3 @@ form {
     height: 450px;
     border: 0;
 }
-

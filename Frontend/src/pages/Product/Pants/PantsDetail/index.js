@@ -44,7 +44,7 @@ function PantsDetail() {
                     <div className={cx('add')}>
                         <FontAwesomeIcon icon={faShoppingCart} className={cx('icon-cart')} />
                         <Link to="/cart">
-                            <Button primary className={cx('cart')}>
+                            <Button   className={cx('cart')}>
                                 Thêm vào giỏ
                             </Button>
                         </Link>

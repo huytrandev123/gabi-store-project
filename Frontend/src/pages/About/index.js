@@ -16,7 +16,7 @@ function About() {
 
     return (
         <div className={cx('wrapper')}>
-            <img src="https://file.hstatic.net/1000184601/file/profile-new-1_4f81c40a9e834a77aec6009be7bb2ae4.jpg" />
+            <img src="https://routine.vn/media/catalog/category/thoi-trang-nam-thuong-hieu-routine-dep-cao-cap-chinh-hang.jpg" />
             <div className={cx('inner')}>
                 <div className={cx('inner-left')}>
                     <p className={cx('brand')}>gabi store</p>

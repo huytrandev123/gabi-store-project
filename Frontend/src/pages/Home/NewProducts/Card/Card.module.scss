@@ -1,5 +1,5 @@
 .card {
-    width: 280px;
+    width: 300px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -49,10 +49,14 @@
         h3 {
             font-size: 18px;
             font-weight: 500;
-            // &:first-child { 
-            //     color: #999;
-            //     text-decoration: line-through;
-            // }
+            &:first-child { 
+                color: #999;
+                text-decoration: line-through;
+            }
         }
     }
 }
+
+// .inner__item-img { 
+//     width: 300px;
+// }
