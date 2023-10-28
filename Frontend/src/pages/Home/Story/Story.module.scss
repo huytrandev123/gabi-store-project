@@ -4,19 +4,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    .btn {
-        background-color: var(--primary-button);
-        color: var(--white-color);
-        &:hover {
-            background-color: #166afbe6;
-        }
-    }
 }
 .container .row {
     width: var(--default-layout-width);
     margin: auto;
 }
+
 .container .row .header {
     width: 60%;
     text-align: center;
@@ -24,13 +17,13 @@
 }
 .container .row .header h1 {
     padding-top: 30px;
-    font-size: 45px;
+    font-size: 35px;
     color: #e19c30;
 }
 
 .container .row .header p {
-    margin-top: 15px;
-    font-size: 18px;
+    margin-top: 10px;
+    font-size: 16px;
     line-height: 1.5;
     color: #6e6e6e;
 }
@@ -47,11 +40,11 @@
     background-color: #fff;
 }
 .content .card img {
-    width: 100%;
-    height: auto;
+    width: 550px;
+    height: 600px;
 }
 .content .card h4 {
-    margin-top: 10px;
+    margin-top: 5px;
     margin-left: 10px;
     font-size: 18px;
 }
@@ -61,6 +54,14 @@
     color: #6e6e6e;
     line-height: 1.5;
     padding: 10px;
+}
+
+.btn {
+    background-color: var(--primary-button);
+    color: var(--white-color); 
+    &:hover { 
+        background-color: var(--button-hover);
+    }
 }
 
 // @media screen and (max-width: 768px) {

@@ -47,9 +47,7 @@ function Story() {
                 </div>
             </div>
             <Link to="/about">
-                <Button  className={cx('btn')}>
-                    Khám phá thêm
-                </Button>
+                <Button className={cx('btn')}>Khám phá thêm</Button>
             </Link>
         </div>
     );

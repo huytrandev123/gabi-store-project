@@ -126,16 +126,21 @@ function Header() {
                             <FontAwesomeIcon className={cx('search')} icon={faMagnifyingGlass} />
 
                             {/* cart */}
-                            <Link>
+                            <Link to="/cart">
                                 <div className={cx('cartIcon')}>
                                     <FontAwesomeIcon
                                         className={cx('cart')}
                                         icon={faCartShopping}
-                                        onClick={() => setOpen(!open)} 
+                                        // onClick={() => setOpen(!open)}
                                     />
                                     <span>0</span>
                                 </div>
                             </Link>
+
+                            {/* <Link to="/cart">
+                                {' '}
+                                <FontAwesomeIcon className={cx('cart')} icon={faCartShopping} />
+                            </Link> */}
                         </div>
                     ) : (
                         <>
@@ -146,7 +151,6 @@ function Header() {
 
                             {/* search */}
                             <FontAwesomeIcon className={cx('search')} icon={faMagnifyingGlass} />
-
 
                             {/* cart */}
                             <Link to="/cart">
@@ -187,7 +191,7 @@ function Header() {
                     {/* <DarkMode/> */}
                 </div>
             </div>
-            {open && <Cart/>}
+            {open && <Cart />}
         </header>
     );
 }

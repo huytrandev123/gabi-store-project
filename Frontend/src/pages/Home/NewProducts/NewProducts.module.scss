@@ -4,8 +4,37 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
     // margin-top: 20px;
     // background-color: #e5fffabc;
+    .icon-right {
+        position: absolute;
+        top: 50%;
+        right: 40px;
+        font-size: 4rem;
+        color: red;
+        cursor: pointer;
+        // background-color: var(--primary-button);
+    }
+
+    .icon-left {
+        position: absolute;
+        top: 50%;
+        left: 40px;
+        font-size: 4rem;
+        color: red;
+        cursor: pointer;
+        // background-color: var(--primary-button);
+    }
+    .indicators { 
+        margin-top: -60px;
+        display: flex;
+    }
+    .btn-radio {
+        margin: 5px;
+        // margin-top: -50px;
+    }
+
 }
 
 .inner {
@@ -34,9 +63,13 @@
     }
 
     .inner-bottom {
+        // width: 33.333%;
         display: flex;
-        // flex-wrap: wrap;
+        // width: 100%;
+        flex-wrap: nowrap;
         justify-content: space-evenly;
-        gap: 40px;
+        gap: 20px;
+        overflow: hidden;
+        transition: transform 0.3s;
     }
 }

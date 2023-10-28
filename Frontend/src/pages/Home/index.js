@@ -19,13 +19,11 @@ const cx = classNames.bind(styles);
 function Home() {
     const slides = [
         { url: banner1, title: 'banner 1' },
-        { url: banner2, title: 'banner 2', content: "về chúng tôi"},
+        { url: banner2, title: 'banner 2', content: 'về chúng tôi' },
     ];
     return (
         <div className={cx('total')}>
-            <div className={cx('containerStyles')}>
-                <Slider slides={slides} />
-            </div>
+            <Slider />
             <Question />
             <Category />
             {/* <PostItem/> */}
