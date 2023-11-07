@@ -16,13 +16,13 @@ function Footer() {
                 <div className={cx('content')}>
                     <div className={cx('inner-left')}>
                         <ul>
-                            <li>Giới thiệu</li>
+                            <li className={cx('big-title')}>Giới thiệu</li>
                             <li>
                                 <Link className={cx('link')} to="/about">
                                     Về chúng tôi
                                 </Link>
                             </li>
-                            <li>
+                            <li className={cx('')}>
                                 <Link className={cx('link')} to="/product">
                                     Sản phẩm
                                 </Link>
@@ -37,7 +37,7 @@ function Footer() {
 
                     <div className={cx('inner-middle')}>
                         <ul>
-                            <li>Điều khoản</li>
+                            <li className={cx('big-title')}>Điều khoản</li>
                             <li><Link className={cx('link')} to="/rules">Điều khoản sử dụng</Link></li>
                             <li>
                                 <Link className={cx('link')} to="/information">Chính sách bảo mật thông tin</Link>
@@ -54,7 +54,7 @@ function Footer() {
                         <div className={cx('address')}>
                             <FontAwesomeIcon icon={faLocationDot} className={cx('icon')} />
                             <span>Liên hệ</span>
-                            <p>Tầng 3-4 Hub Building 195/10E Điện Biên Phủ, P.15, Q.Bình Thạnh, TP.Hồ Chí Minh</p>
+                            <p className={cx('main-address')}>Tầng 3-4 Hub Building 195/10E Điện Biên Phủ, P.15, Q.Bình Thạnh, TP.Hồ Chí Minh</p>
                         </div>
                     </div>
                 </div>

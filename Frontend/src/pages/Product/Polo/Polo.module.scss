@@ -14,7 +14,6 @@
     // margin-bottom: 100px;
 }
 h1 {
-    padding-top: 30px;
     text-align: center;
     display: block;
     text-transform: uppercase;
@@ -119,3 +118,19 @@ h1 {
     color: #aaa;
     user-select: none;
 }
+
+
+// Responsive
+@media  screen and (max-width: 769px) {
+    .wrapper__total { 
+        min-height: 500px;
+    }
+
+    .wrapper__total h1 { 
+        font-size: 2rem;
+    }
+    .inner { 
+        width: 700px;
+    }
+}
+

@@ -31,7 +31,6 @@ function BestSeller() {
         <div className={cx('wrapper__total')} data-aos="fade-right">
             <h1>Bán chạy nhất</h1>
             <div className={cx('wrapper')}>
-                {/* <h1 className='title'>BestSeller</h1> */}
                 <div className={cx('inner')}>
                     {bestSeller.map((best) => (
                         <div  className={cx('inner__item')} key={best.id}>
@@ -45,7 +44,7 @@ function BestSeller() {
                                     <Link to="">{best.name}</Link>
                                 </p>
                                 <div className={cx('inner__item-content-inner')}>
-                                    <p className={cx('inner__item-content-price')}>{best.price}.000</p>
+                                    <p className={cx('inner__item-content-price')}>{best.price}.000đ</p>
                                     <span className={cx('inner__item-content-buy')}>Lượt mua: {best.buy} cái</span>
                                 </div>
                             </div>

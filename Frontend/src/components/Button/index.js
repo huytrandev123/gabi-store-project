@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 
-function Button({
+function ButtonComponent({
     to,
     href,
     onClick,
@@ -67,4 +67,4 @@ function Button({
     );
 }
 
-export default Button;
+export default ButtonComponent;

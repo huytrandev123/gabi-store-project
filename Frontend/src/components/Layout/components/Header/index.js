@@ -2,18 +2,23 @@ import styles from './Header.module.scss';
 import classNames from 'classnames/bind';
 import { Link } from 'react-router-dom';
 import Tippy from '@tippyjs/react/headless';
+import { Button } from 'react-bootstrap';
 import 'tippy.js/dist/tippy.css';
 // Fontawesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
+    faBars,
     faCartShopping,
     faCircleQuestion,
     faEarthAsia,
     faEllipsisVertical,
+    faHome,
     faMagnifyingGlass,
+    faShirt,
+    faTimes,
 } from '@fortawesome/free-solid-svg-icons';
 
-import Button from '../../../Button';
+import ButtonComponent from '../../../Button';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import Menu from '../../../Poppers/Menu';
 import { useEffect, useState } from 'react';
@@ -21,36 +26,6 @@ import axios from 'axios';
 import Cart from '../../../../pages/Cart';
 import DarkModeToggle from '../../../DarkModeToggle';
 const cx = classNames.bind(styles);
-
-const MENU_ITEMS = [
-    {
-        icon: <FontAwesomeIcon icon={faEarthAsia} />,
-        title: 'Tiếng Việt',
-        // Menu cấp 2
-        children: {
-            title: 'Ngôn ngữ',
-            data: [
-                {
-                    type: 'language',
-                    code: 'en',
-                    title: 'Tiếng Anh',
-                },
-
-                {
-                    type: 'language',
-                    code: 'vi',
-                    title: 'Tiếng Việt',
-                },
-            ],
-        },
-    },
-
-    {
-        icon: <FontAwesomeIcon icon={faCircleQuestion} />,
-        title: 'Hỗ trợ và đánh giá',
-        to: '/cart',
-    },
-];
 
 function Header() {
     const currentUsers = false;
@@ -73,23 +48,73 @@ function Header() {
         });
     }, []);
 
-    // Handle logic menu change
-    const handleMenuChange = (menuItem) => {
-        console.log(menuItem);
-    };
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                {/* Logo */}
-                <Link to="/" style={{ borderRadius: '50%' }}>
-                    {/* <img className={cx('logo')} src={logo} />  */}
-                    <h2 className={cx('brand')}>gabistore</h2>
-                </Link>
+                <div className={cx('inner-top-header')}>
+                    <div className={cx('left-icon')}>
+                        <label htmlFor="nav-mobile-input">
+                            <FontAwesomeIcon className={cx('bars-icon')} icon={faBars} />
+                            
+                        </label>
+                        <FontAwesomeIcon className={cx('shirt-icon')} icon={faShirt} />
+                        <FontAwesomeIcon className={cx('search-icon')} icon={faMagnifyingGlass} />
+                    </div>
+                    <div className={cx('header-brand')}>
+                        <Link to="/" style={{ borderRadius: '50%' }}>
+                            <h2 className={cx('brand')}>gabistore</h2>
+                        </Link>
+                    </div>
+
+                    <div className={cx('icon')}>
+                        {auth ? (
+                            <div className={cx('icon__main')}>
+                                <Link to="/login">
+                                    <button className={cx('icon-btn')}>
+                                        <img
+                                            src="https://i.pinimg.com/564x/2c/68/78/2c687844ea0792946c292d163f1dac68.jpg"
+                                            className={cx('avatar')}
+                                        />
+                                    </button>
+                                </Link>
+
+                                <Link to="/cart">
+                                    <div className={cx('cartIcon')}>
+                                        <FontAwesomeIcon
+                                            className={cx('cart')}
+                                            icon={faCartShopping}
+                                            // onClick={() => setOpen(!open)}
+                                        />
+                                        <span>0</span>
+                                    </div>
+                                </Link>
+                            </div>
+                        ) : (
+                            <div className={cx('not-auth')}>
+                                <Link to="/">
+                                    {' '}
+                                    <FontAwesomeIcon className={cx('home')} icon={faHome} />
+                                </Link>
+
+                                <Link to="/login">
+                                    <FontAwesomeIcon className={cx('user')} icon={faUser} />
+                                </Link>
+
+                                <Link to="/cart">
+                                    {' '}
+                                    <FontAwesomeIcon className={cx('cart')} icon={faCartShopping} />
+                                </Link>
+                            </div>
+                        )}
+                    </div>
+                </div>
                 {/* HeaderMenu */}
                 <div className={cx('headerMenu')}>
                     <ul>
                         <li>
-                            <Link to="/">Trang chủ</Link>
+                            <Link to="/" className={cx('item')}>
+                                Trang chủ
+                            </Link>
                         </li>
 
                         <li>
@@ -107,88 +132,63 @@ function Header() {
                         <li>
                             <Link to="/contact">Liên hệ</Link>
                         </li>
+
+                        <li>
+                            <Link to="/policy">Chính sách</Link>
+                        </li>
                     </ul>
                 </div>
 
-                <div className={cx('icon')}>
-                    {auth ? (
-                        <div className={cx('icon__main')}>
-                            {/* user */}
-                            <Link to="/login">
-                                <button className={cx('icon-btn')}>
-                                    <img
-                                        src="https://i.pinimg.com/564x/2c/68/78/2c687844ea0792946c292d163f1dac68.jpg"
-                                        className={cx('avatar')}
-                                    />
-                                </button>
+                {/* Input */}
+                <input type="checkbox" className={cx('nav_input')} id="nav-mobile-input" />
+
+                {/* Overlay */}
+                <label htmlFor="nav-mobile-input" className={cx('nav_overlay')}></label>
+
+                {/* Header mobile */}
+                <div className={cx('headerMenu__mobile')}>
+                    <label htmlFor='nav-mobile-input' className={cx('headerMenu__mobile-close')}>
+                        <FontAwesomeIcon icon={faTimes} />
+                    </label>
+                    <ul className={cx('headerMenu__mobile-list')}>
+                        <li>
+                            <Link to="/" className={cx('headerMenu__mobile-link')}>
+                                Trang chủ
                             </Link>
-                            {/* search */}
-                            <FontAwesomeIcon className={cx('search')} icon={faMagnifyingGlass} />
+                        </li>
 
-                            {/* cart */}
-                            <Link to="/cart">
-                                <div className={cx('cartIcon')}>
-                                    <FontAwesomeIcon
-                                        className={cx('cart')}
-                                        icon={faCartShopping}
-                                        // onClick={() => setOpen(!open)}
-                                    />
-                                    <span>0</span>
-                                </div>
+                        <li>
+                            <Link to="/about" className={cx('headerMenu__mobile-link')}>
+                                Câu chuyện
                             </Link>
+                        </li>
 
-                            {/* <Link to="/cart">
-                                {' '}
-                                <FontAwesomeIcon className={cx('cart')} icon={faCartShopping} />
-                            </Link> */}
-                        </div>
-                    ) : (
-                        <>
-                            {/* user */}
-                            <Link to="/login">
-                                <FontAwesomeIcon className={cx('user')} icon={faUser} />
+                     
+
+                        <li>
+                            <Link to="/blog" className={cx('headerMenu__mobile-link')}>
+                                Blog
                             </Link>
+                        </li>
 
-                            {/* search */}
-                            <FontAwesomeIcon className={cx('search')} icon={faMagnifyingGlass} />
-
-                            {/* cart */}
-                            <Link to="/cart">
-                                {' '}
-                                <FontAwesomeIcon className={cx('cart')} icon={faCartShopping} />
+                        <li>
+                            <Link to="/product" className={cx('headerMenu__mobile-link')}>
+                                Sản phẩm
                             </Link>
+                        </li>
 
-                            {/* Menu Poppers */}
-                            {/* <Tippy
-                                interactive
-                                placement="bottom-end"
-                                render={(attrs) => (
-                                    <div className={cx('menu-items')} tabIndex="-1" {...attrs}>
-                                        <PopperWrapper>
-                                            <SearchFashionItem />
-                                            <SearchFashionItem />
-                                            <SearchFashionItem />
-                                            <SearchFashionItem />
-                                        </PopperWrapper>
-                                    </div>
-                                )}
-                            >
-                                <button className={cx('more-btn')}>
-                                    <FontAwesomeIcon icon={faEllipsisVertical} />
-                                </button>
-                            </Tippy> */}
+                        <li>
+                            <Link to="/contact" className={cx('headerMenu__mobile-link')}>
+                                Liên hệ
+                            </Link>
+                        </li>
 
-                            <Menu items={MENU_ITEMS} onChange={handleMenuChange}>
-                                <button className={cx('more-btn')}>
-                                    <FontAwesomeIcon icon={faEllipsisVertical} />
-                                </button>
-                            </Menu>
-                            {/* Dark mode */}
-                            {/* <DarkModeToggle/> */}
-                            {/* <DarkMode/> */}
-                        </>
-                    )}
-                    {/* <DarkMode/> */}
+                        <li>
+                            <Link to="/policy" className={cx('headerMenu__mobile-link')}>
+                                Chính sách
+                            </Link>
+                        </li>
+                    </ul>
                 </div>
             </div>
             {open && <Cart />}

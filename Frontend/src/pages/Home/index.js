@@ -13,6 +13,7 @@ import NewProducts from './NewProducts';
 import DarkModeToggle from '../../components/DarkModeToggle';
 import banner1 from '../../img/1.jpg';
 import banner2 from '../../img/banner-2.jpg';
+import StoryDetail from './StoryDetail';
 
 const cx = classNames.bind(styles);
 

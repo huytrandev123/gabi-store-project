@@ -1,4 +1,3 @@
-
 .wrapper {
     width: 100%;
     height: 404px;
@@ -16,7 +15,7 @@
         justify-content: space-between;
         margin-top: 20px;
 
-        .link { 
+        .link {
             color: var(--white-color);
         }
 
@@ -24,7 +23,6 @@
             display: flex;
             flex-direction: column;
 
-            
             li {
                 list-style: none;
                 position: relative;
@@ -55,7 +53,6 @@
                     user-select: none;
                 }
             }
-
         }
 
         .inner-middle {
@@ -114,31 +111,193 @@
     hr {
         border-top: 1px solid rgba(238, 238, 238, 0.385);
     }
-    
-    .bottom { 
+
+    .bottom {
         color: var(--white-color);
         font-size: 12px;
         display: flex;
         justify-content: space-between;
         align-items: center;
 
-        .bottom-right { 
+        .bottom-right {
             // font-size: 18px;
-            .bottom-icon { 
+            .bottom-icon {
                 padding: 0 10px;
 
-                &:hover { 
+                &:hover {
                     cursor: pointer;
                 }
-                &:active { 
+                &:active {
                     color: #ffffff92;
                 }
             }
 
-            span { 
+            span {
                 user-select: none;
                 // font-size: 12px;
             }
         }
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    .wrapper {
+        width: 1024px;
+    }
+
+    .inner {
+        width: 980px;
+    }
+
+    .bottom {
+        width: 980px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .bottom-right {
+        width: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .wrapper {
+        width: 768px;
+    }
+
+    .inner {
+        width: 680px;
+    }
+
+    .bottom {
+        width: 769px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .bottom-left {
+        width: 390px;
+    }
+
+    .bottom-right {
+        width: 250px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // margin-right: 40px;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 601px) {
+    .wrapper {
+        width: 600px;
+    }
+
+    .inner {
+        width: 580px;
+        font-size: 1.4rem;
+    }
+    .bottom {
+        width: 580px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .bottom-left {
+        width: 300px;
+    }
+
+    .bottom-right {
+        width: 220px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // text-align: justify;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 415px) {
+    .wrapper {
+        width: 414px;
+    }
+    .inner {
+        width: 400px;
+        font-size: 1rem;
+    }
+
+    .content {
+        width: 390px;
+        display: flex;
+    }
+
+    .bottom {
+        width: 414px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .bottom-left {
+        width: 220px;
+    }
+
+    .bottom-right {
+        width: 180px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .wrapper {
+        width: 376px;
+    }
+    .inner {
+        width: 350px;
+        font-size: 1rem;
+    }
+
+    .content {
+        width: 100%;
+        display: flex;
+        font-size: 8px;
+    }
+
+    .big-title {
+        // display: block;
+        // width: 100px;
+        // font-size: small;
+        // margin: 0 5px;
+        // background-color: red;
+    }
+
+    .address .main-address {
+        font-size: 9px;
+    }
+
+    .bottom {
+        width: 350px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .bottom-left {
+        width: 200px;
+        font-size: 9px;
+    }
+
+    .bottom-right {
+        width: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        font-size: 9px;
     }
 }

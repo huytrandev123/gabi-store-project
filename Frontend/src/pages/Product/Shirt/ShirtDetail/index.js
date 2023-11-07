@@ -23,7 +23,7 @@ function ShirtDetail() {
             <div className={cx('inner')}>
                 <div className={cx('left')}>
                     <div className={cx('images')}>
-                        <img src={details.img} /> 
+                        <img src={details.img} />
                     </div>
 
                     {/* <div className={cx('mainImg')}>
@@ -44,9 +44,7 @@ function ShirtDetail() {
                     <div className={cx('add')}>
                         <FontAwesomeIcon icon={faShoppingCart} className={cx('icon-cart')} />
                         <Link to="/cart">
-                            <Button  className={cx('cart')}>
-                                Thêm vào giỏ
-                            </Button>
+                            <Button className={cx('cart')}>Thêm vào giỏ</Button>
                         </Link>
                     </div>
                     <hr />

@@ -100,7 +100,7 @@ function Question() {
 
     return (
         <div className={cx('question')}>
-            <h1>Bạn đang tìm gì hôm nay? </h1>
+            <h1 className={cx('title')}>Bạn đang tìm gì hôm nay? </h1>
             <HeadlessTippy
                 interactive
                 placement="top-end"

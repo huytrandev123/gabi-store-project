@@ -33,6 +33,7 @@ import Story from '../pages/Story';
 import Rules from '../pages/Rules';
 import Information from '../pages/Information';
 import BlogDetail from '../pages/Blog/BlogDetail';
+import StoryDetail from '../pages/Home/StoryDetail';
 
 // Routes ko đăng nhập vẫn vào dc
 const publicRoutes = [
@@ -57,10 +58,11 @@ const publicRoutes = [
     { path: '/forget_password', component: ForgetPassword, layout: HeaderOnly },
     { path: '/deliverInfo', component: DeliverInfo },
     { path: '/policy', component: Policy },
-    { path: '/contact', component: Contact, layout: HeaderOnly },
+    { path: '/contact', component: Contact },
     { path: '/thanks', component: Thanks, layout: NoHeader },
     { path: '/confirm_order', component: ConfirmOrder, layout: HeaderOnly },
     { path: '/cart', component: Cart, layout: HeaderOnly },
+    { path: '/story-detail', component: StoryDetail, layout: HeaderOnly},
 
     // -----
     { path: '/admin', component: Admin, layout: NoHeader },

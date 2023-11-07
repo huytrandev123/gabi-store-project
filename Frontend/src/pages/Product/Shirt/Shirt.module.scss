@@ -14,7 +14,6 @@
     // margin-bottom: 100px;
 }
 h1 {
-    padding-top: 30px;
     text-align: center;
     display: block;
     text-transform: uppercase;
@@ -66,15 +65,12 @@ h1 {
 
     &:hover {
         transform: translateY(-1px);
-        box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     }
-
 
     &:after {
         background-color: #fff;
-    } 
-
-    
+    }
 }
 
 .inner__item-content {
@@ -95,7 +91,7 @@ h1 {
 .inner__item-content-title {
     // font-style: italic;
 }
-.inner__item-content--inner { 
+.inner__item-content--inner {
     display: flex;
     justify-content: space-between;
 }
@@ -104,12 +100,21 @@ h1 {
     color: var(--text-color);
     font-weight: 600;
     user-select: none;
-
 }
-
 
 .inner__item-content-buy {
     // font-weight: 400;
     color: #aaa;
     user-select: none;
 }
+
+// Responsive
+@media screen and (max-width: 769px) {
+    .wrapper__total h1 {
+        font-size: 2rem;
+    }
+    .inner {
+        width: 700px;
+    }
+}
+

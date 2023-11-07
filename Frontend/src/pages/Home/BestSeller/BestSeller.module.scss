@@ -85,7 +85,6 @@ h1 {
 
 .sub-title {
     width: calc(100% + 170px);
-
     height: 100%;
     background-color: #eeeeee50;
     position: absolute;
@@ -99,12 +98,11 @@ h1 {
         transform: translateY(-50%);
         left: 40%;
         font-size: 48px;
-        &:hover { 
+        &:hover {
             cursor: pointer;
             opacity: 0.9;
-
         }
-        &:active { 
+        &:active {
             opacity: 0.8;
         }
     }
@@ -146,4 +144,85 @@ h1 {
     // font-weight: 400;
     color: #aaa;
     user-select: none;
+}
+
+// Responsive
+@media screen and (max-width: 1025px) {
+    .wrapper {
+        width: 1024px;
+    }
+    .inner {
+        width: 950px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin: auto;
+        gap: 20px;
+    }
+
+    .inner__item-img {
+        width: 300px;
+        gap: 20px;
+    }
+
+    .inner__item-content {
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+    }
+    .inner__item-content-title {
+        width: 300px;
+        font-size: 1.4rem;
+    }
+
+    .inner__item-content-inner {
+        display: flex;
+        width: 300px;
+        // background-color: red;
+    }
+    .inner__item-content-price,
+    .inner__item-content-buy {
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .wrapper {
+        width: 767px;
+    }
+    .inner {
+        width: 750px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin: auto;
+        gap: 20px;
+    }
+
+    .inner__item {
+        width: 200px;
+    }
+
+    .inner__item-img {
+        width: 200px;
+        gap: 20px;
+    }
+
+    .inner__item-content {
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+    }
+    .inner__item-content-title {
+        width: 300px;
+        font-size: 1.4rem;
+    }
+
+    .inner__item-content-inner {
+        display: flex;
+        width: 300px;
+        // background-color: red;
+    }
+    .inner__item-content-price,
+    .inner__item-content-buy {
+        font-size: 1.3rem;
+    }
 }

@@ -5,6 +5,7 @@
     justify-content: center;
     align-items: center;
     background-color: #f2f6ff;
+    user-select: none;
 }
 
 .inner {
@@ -114,3 +115,34 @@
         }
     }
 }
+
+
+
+// // Responsive
+// @media  screen and (max-width: 769px) {
+//     .wrapper { 
+//         width: 769px;
+//     }
+//     .inner { 
+//         width: 700px;
+//         padding: 20px ;
+//         display: flex;
+//     }
+
+//     .inner .left { 
+//         background-color: red;
+//     }
+
+//     .images { 
+//         background-color: red;
+//     }
+
+   
+
+    
+// }
+
+// @media screen and (max-width:376px) {
+   
+
+// }

@@ -24,7 +24,7 @@ function ShirtCards({ item }) {
                 // onClick={console.log('detail')}
             />
             <div className={cx('inner__item-content')}>
-                <p className={cx('inner__item-content-title')}>{item.name}</p>
+                <p className={cx('inner__item-content-title')}>{item.name} </p>
                 <div className={cx('inner__item-content--inner')}>
                     <p className={cx('inner__item-content-price')}>
                         {item.price}.000
